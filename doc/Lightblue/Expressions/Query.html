@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="../../js/custom.js"></script>
+
 
   </head>
   <body>
@@ -111,12 +113,6 @@
 
 
 
-  <h2>Constant Summary</h2>
-  
-  <h3 class="inherited">Constants inherited
-     from <span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Lightblue::Expression</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Expression.html#Errors-constant" title="Lightblue::Expression::Errors (constant)">Lightblue::Expression::Errors</a></span></p>
-
 
 
 
@@ -128,6 +124,87 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all-instance_method" title="#all (instance method)">- (Expression) <strong>all</strong>(expression) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      included
+      from <span class='object_link'><a href="Operators/NaryLogical.html#all-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#all (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#and-instance_method" title="#and (instance method)">- (Expression) <strong>and</strong>(expression) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      included
+      from <span class='object_link'><a href="Operators/NaryLogical.html#and-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#and (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#any-instance_method" title="#any (instance method)">- (Expression) <strong>any</strong>(expression) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      included
+      from <span class='object_link'><a href="Operators/NaryLogical.html#any-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#any (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -155,6 +232,104 @@
 </li>
 
       
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#nary_logical_operator-instance_method" title="#nary_logical_operator (instance method)">- (Query) <strong>nary_logical_operator</strong>(token, expressions) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#not-instance_method" title="#not (instance method)">- (Expression) <strong>not</strong>(expression) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      included
+      from <span class='object_link'><a href="Operators/UnaryLogical.html#not-instance_method" title="Lightblue::Expressions::Operators::UnaryLogical#not (method)">Operators::UnaryLogical</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#or-instance_method" title="#or (instance method)">- (Expression) <strong>or</strong>(expression) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      included
+      from <span class='object_link'><a href="Operators/NaryLogical.html#or-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#or (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#unary_logical_operator-instance_method" title="#unary_logical_operator (instance method)">- (Query) <strong>unary_logical_operator</strong>(token, expression) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -164,34 +339,7 @@
   
   
   
-  
-  
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Operators/NaryLogical.html" title="Lightblue::Expressions::Operators::NaryLogical (module)">Operators::NaryLogical</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Operators/NaryLogical.html#all-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#all (method)">#all</a></span>, <span class='object_link'><a href="Operators/NaryLogical.html#and-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#and (method)">#and</a></span>, <span class='object_link'><a href="Operators/NaryLogical.html#any-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#any (method)">#any</a></span>, <span class='object_link'><a href="Operators/NaryLogical.html#or-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#or (method)">#or</a></span></p>
-
-  
-  
-  
-  
-  
-  
-  
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Operators/UnaryLogical.html" title="Lightblue::Expressions::Operators::UnaryLogical (module)">Operators::UnaryLogical</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Operators/UnaryLogical.html#not-instance_method" title="Lightblue::Expressions::Operators::UnaryLogical#not (method)">#not</a></span></p>
-
-  
-  
-  
-  
-  
-  
-  
-  
-  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Lightblue::Expression</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Expression.html#klass-instance_method" title="Lightblue::Expression#klass (method)">#klass</a></span></p>
-<div id="constructor_details" class="method_details_list">
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -244,14 +392,16 @@
 12
 13
 14
-15</pre>
+15
+16</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/lightblue/expressions/query.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_expression'>expression</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ast'>ast</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_expression'>expression</span>
-        <span class='kw'>when</span> <span class='const'>Expression</span> <span class='kw'>then</span> <span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_ast'>ast</span>
+        <span class='kw'>when</span> <span class='const'>Expressions</span><span class='op'>::</span><span class='const'>Query</span> <span class='kw'>then</span> <span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_ast'>ast</span>
+        <span class='kw'>when</span> <span class='const'>Expressions</span><span class='op'>::</span><span class='const'>Unbound</span> <span class='kw'>then</span> <span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_bind'>bind</span><span class='lparen'>(</span><span class='symbol'>:query</span><span class='rparen'>)</span>
         <span class='kw'>when</span> <span class='const'>AST</span><span class='op'>::</span><span class='const'>Node</span> <span class='kw'>then</span> <span class='id identifier rubyid_expression'>expression</span>
         <span class='kw'>when</span> <span class='kw'>nil</span> <span class='kw'>then</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:query_expression</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
         <span class='kw'>end</span>
@@ -265,12 +415,478 @@
 </div>
 
 
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="all-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>) <strong>all</strong>(expression) 
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Operators/NaryLogical.html#all-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#all (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="and-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>) <strong>and</strong>(expression) 
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Operators/NaryLogical.html#and-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#and (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="any-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>) <strong>any</strong>(expression) 
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Operators/NaryLogical.html#any-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#any (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nary_logical_operator-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Lightblue::Expressions::Query (class)">Query</a></span></tt>) <strong>nary_logical_operator</strong>(token, expressions)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="" title="Lightblue::Expressions::Query (class)">Query</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Lightblue::Expressions::Query (class)">Query</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expressions/query.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nary_logical_operator'>nary_logical_operator</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_expressions'>expressions</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_valid'>valid</span> <span class='op'>=</span> <span class='id identifier rubyid_expressions'>expressions</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_expressions'>expressions</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_exp'>exp</span><span class='op'>|</span> <span class='id identifier rubyid_exp'>exp</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Expression</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_fail'>fail</span> <span class='const'>Errors</span><span class='op'>::</span><span class='const'>BadParamForOperator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_expressions'>expressions</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_valid'>valid</span>
+
+  <span class='id identifier rubyid_expressions'>expressions</span> <span class='op'>=</span> <span class='id identifier rubyid_expressions'>expressions</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_exp'>exp</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_exp'>exp</span>
+    <span class='kw'>when</span> <span class='const'>Expressions</span><span class='op'>::</span><span class='const'>Query</span> <span class='kw'>then</span> <span class='id identifier rubyid_exp'>exp</span><span class='period'>.</span><span class='id identifier rubyid_ast'>ast</span>
+    <span class='kw'>when</span> <span class='const'>Expressions</span><span class='op'>::</span><span class='const'>Unbound</span> <span class='kw'>then</span> <span class='id identifier rubyid_exp'>exp</span><span class='period'>.</span><span class='id identifier rubyid_bind'>bind</span><span class='lparen'>(</span><span class='symbol'>:query</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'>AST</span><span class='op'>::</span><span class='const'>Node</span> <span class='kw'>then</span> <span class='id identifier rubyid_expression'>expression</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:nary_logical_expression</span><span class='comma'>,</span>
+                     <span class='lbracket'>[</span><span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:nary_logical_operator</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_token'>token</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+                      <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:query_array</span><span class='comma'>,</span> <span class='id identifier rubyid_expressions'>expressions</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="not-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>) <strong>not</strong>(expression) 
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Operators/UnaryLogical.html#not-instance_method" title="Lightblue::Expressions::Operators::UnaryLogical#not (method)">Operators::UnaryLogical</a></span>
+    </span>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="or-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>) <strong>or</strong>(expression) 
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Operators/NaryLogical.html#or-instance_method" title="Lightblue::Expressions::Operators::NaryLogical#or (method)">Operators::NaryLogical</a></span>
+    </span>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unary_logical_operator-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Lightblue::Expressions::Query (class)">Query</a></span></tt>) <strong>unary_logical_operator</strong>(token, expression)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Lightblue::Expressions::Query (class)">Query</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Lightblue::Expressions::Query (class)">Query</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expressions/query.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unary_logical_operator'>unary_logical_operator</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_fail'>fail</span> <span class='const'>Errors</span><span class='op'>::</span><span class='const'>BadParamForOperator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Query</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:unary_logical_expression</span><span class='comma'>,</span>
+                     <span class='lbracket'>[</span><span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:unary_logical_operator</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_token'>token</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+                      <span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_ast'>ast</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:55 2016 by
+  Generated on Sun Jan 31 04:15:03 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>

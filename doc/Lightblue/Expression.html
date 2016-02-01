@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="../js/custom.js"></script>
+
 
   </head>
   <body>
@@ -94,7 +96,9 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/lightblue/expression.rb</dd>
+    <dd class="r2 last">lib/lightblue/expression.rb<span class="defines">,<br />
+  lib/lightblue/expression.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -155,11 +159,64 @@ with the tranformed AST.</p>
 
   
     <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#new_node-class_method" title="new_node (class method)">+ (Object) <strong>new_node</strong>(type, children) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
+      
+        <li class="protected ">
+  <span class="summary_signature">
+    
+      <a href="#ast-instance_method" title="#ast (instance method)">- (Object) <strong>ast</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title protected">protected</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -207,6 +264,72 @@ with the tranformed AST.</p>
     <span class="summary_desc"><div class='inline'>
 <p>!@endgroup.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#literal_to_expression-instance_method" title="#literal_to_expression (instance method)">- (Object) <strong>literal_to_expression</strong>(literal) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#literal_to_node-instance_method" title="#literal_to_node (instance method)">- (Object) <strong>literal_to_node</strong>(literal) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#new_node-instance_method" title="#new_node (instance method)">- (Object) <strong>new_node</strong>(type, children) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -263,12 +386,113 @@ with the tranformed AST.</p>
 </div>
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="new_node-class_method">
+  
+    + (<tt>Object</tt>) <strong>new_node</strong>(type, children)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>children</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expression.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
+  <span class='const'>AST</span><span class='op'>::</span><span class='const'>Node</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="klass-instance_method">
+  <h3 class="signature first" id="ast-instance_method">
+  
+    - (<tt>Object</tt>) <strong>ast</strong>  <span class="extras">(protected)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expression.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ast'>ast</span>
+  <span class='ivar'>@ast</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="klass-instance_method">
   
     - (<tt>Object</tt>) <strong>klass</strong> 
   
@@ -308,14 +532,114 @@ with the tranformed AST.</p>
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="literal_to_expression-instance_method">
+  
+    - (<tt>Object</tt>) <strong>literal_to_expression</strong>(literal)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expression.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_literal_to_expression'>literal_to_expression</span><span class='lparen'>(</span><span class='id identifier rubyid_literal'>literal</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_literal_to_node'>literal_to_node</span><span class='lparen'>(</span><span class='id identifier rubyid_literal'>literal</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="literal_to_node-instance_method">
+  
+    - (<tt>Object</tt>) <strong>literal_to_node</strong>(literal)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expression.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_literal_to_node'>literal_to_node</span><span class='lparen'>(</span><span class='id identifier rubyid_literal'>literal</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_literal'>literal</span>
+  <span class='kw'>when</span> <span class='const'>Fixnum</span> <span class='kw'>then</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:value</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_literal'>literal</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='const'>String</span> <span class='kw'>then</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:value</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_literal'>literal</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='const'>Symbol</span> <span class='kw'>then</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:value</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_literal'>literal</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='const'>Array</span> <span class='kw'>then</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='symbol'>:value_list_array</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_literal'>literal</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_node-instance_method">
+  
+    - (<tt>Object</tt>) <strong>new_node</strong>(type, children)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expression.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_node'>new_node</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
+  <span class='const'>AST</span><span class='op'>::</span><span class='const'>Node</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:55 2016 by
+  Generated on Sun Jan 31 04:33:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>

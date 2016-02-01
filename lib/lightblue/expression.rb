@@ -1,6 +1,7 @@
 require 'lightblue/expressions/errors'
 require 'lightblue/expressions/operators'
 module Lightblue
+  
   # The Expression class wraps and manipulates the AST for each expression type specified by Lightblue. It is the only class that should
   # operate directly on the AST.
   #

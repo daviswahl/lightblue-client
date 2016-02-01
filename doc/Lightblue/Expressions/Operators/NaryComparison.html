@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="../../../js/custom.js"></script>
+
 
   </head>
   <body>
@@ -116,6 +118,28 @@
   
   
   
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#nary_comparison_operator-instance_method" title="#nary_comparison_operator (instance method)">- (Expression) <strong>nary_comparison_operator</strong>(token, expression) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  <span class="abstract note title">abstract</span>
   
   
 
@@ -239,6 +263,86 @@
 
 <span class='kw'>def</span> <span class='kw'>in</span><span class='lparen'>(</span><span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_nary_comparison_operator'>nary_comparison_operator</span><span class='lparen'>(</span><span class='symbol'>:$in</span><span class='comma'>,</span> <span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nary_comparison_operator-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>) <strong>nary_comparison_operator</strong>(token, expression)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This method is abstract.</strong>
+  <div class='inline'></div>
+</div>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>expression</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Expression.html" title="Lightblue::Expression (class)">Expression</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expressions/operators.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nary_comparison_operator'>nary_comparison_operator</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -384,9 +488,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:54 2016 by
+  Generated on Sun Jan 31 04:15:02 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>

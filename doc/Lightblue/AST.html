@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="../js/custom.js"></script>
+
 
   </head>
   <body>
@@ -80,7 +82,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/lightblue/ast/tokens.rb<span class="defines">,<br />
-  lib/lightblue/ast.rb,<br /> lib/lightblue/ast/visitor.rb,<br /> lib/lightblue/ast/visitors/hash_visitor.rb,<br /> lib/lightblue/ast/visitors/unfold_visitor.rb,<br /> lib/lightblue/ast/visitors/validation_visitor.rb</span>
+  lib/lightblue/ast.rb,<br /> lib/lightblue/ast/visitor.rb,<br /> lib/lightblue/ast/visitors/hash_visitor.rb,<br /> lib/lightblue/ast/visitors/unfold_visitor.rb,<br /> lib/lightblue/ast/visitors/validation_visitor.rb,<br /> lib/lightblue/ast/visitors/query_bind_visitor.rb,<br /> lib/lightblue/ast/visitors/projection_bind_visitor.rb</span>
 </dd>
   
 </dl>
@@ -214,12 +216,12 @@
       <pre class="lines">
 
 
-14
-15
-16</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
   <span class='const'>Visitors</span><span class='op'>::</span><span class='const'>HashVisitor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_unfold'>unfold</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -244,12 +246,12 @@
       <pre class="lines">
 
 
-10
-11
-12</pre>
+12
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_unfold'>unfold</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
   <span class='const'>Visitors</span><span class='op'>::</span><span class='const'>UnfoldVisitor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
@@ -296,12 +298,12 @@
       <pre class="lines">
 
 
-18
-19
-20</pre>
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
   <span class='const'>Visitors</span><span class='op'>::</span><span class='const'>ValidationVisitor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_unfold'>unfold</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -316,9 +318,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:54 2016 by
+  Generated on Sun Jan 31 04:15:02 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>

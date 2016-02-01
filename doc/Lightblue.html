@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="js/custom.js"></script>
+
 
   </head>
   <body>
@@ -84,7 +86,7 @@
   
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">lib/lightblue.rb<span class="defines">,<br />
-  lib/lightblue/ast.rb,<br /> lib/lightblue/http.rb,<br /> lib/lightblue/entity.rb,<br /> lib/lightblue/client.rb,<br /> lib/lightblue/request.rb,<br /> lib/lightblue/manager.rb,<br /> lib/lightblue/version.rb,<br /> lib/lightblue/ast/tokens.rb,<br /> lib/lightblue/expression.rb,<br /> lib/lightblue/ast/visitor.rb,<br /> lib/lightblue/managers/find.rb,<br /> lib/lightblue/managers/save.rb,<br /> lib/lightblue/configuration.rb,<br /> lib/lightblue/managers/insert.rb,<br /> lib/lightblue/managers/delete.rb,<br /> lib/lightblue/managers/update.rb,<br /> lib/lightblue/expressions/sort.rb,<br /> lib/lightblue/expressions/query.rb,<br /> lib/lightblue/expressions/field.rb,<br /> lib/lightblue/expressions/update.rb,<br /> lib/lightblue/expressions/errors.rb,<br /> lib/lightblue/expressions/unbound.rb,<br /> lib/lightblue/expressions/operators.rb,<br /> lib/lightblue/expressions/projection.rb,<br /> lib/lightblue/ast/visitors/hash_visitor.rb,<br /> lib/lightblue/ast/visitors/unfold_visitor.rb,<br /> lib/lightblue/ast/visitors/validation_visitor.rb</span>
+  lib/lightblue/ast.rb,<br /> lib/lightblue/http.rb,<br /> lib/lightblue/client.rb,<br /> lib/lightblue/entity.rb,<br /> lib/lightblue/manager.rb,<br /> lib/lightblue/request.rb,<br /> lib/lightblue/version.rb,<br /> lib/lightblue/expression.rb,<br /> lib/lightblue/ast/tokens.rb,<br /> lib/lightblue/ast/visitor.rb,<br /> lib/lightblue/managers/find.rb,<br /> lib/lightblue/managers/save.rb,<br /> lib/lightblue/configuration.rb,<br /> lib/lightblue/managers/insert.rb,<br /> lib/lightblue/managers/update.rb,<br /> lib/lightblue/managers/delete.rb,<br /> lib/lightblue/expressions/sort.rb,<br /> lib/lightblue/expressions/field.rb,<br /> lib/lightblue/expressions/query.rb,<br /> lib/lightblue/expressions/errors.rb,<br /> lib/lightblue/expressions/update.rb,<br /> lib/lightblue/expressions/unbound.rb,<br /> lib/lightblue/expressions/operators.rb,<br /> lib/lightblue/expressions/projection.rb,<br /> lib/lightblue/ast/visitors/hash_visitor.rb,<br /> lib/lightblue/ast/visitors/unfold_visitor.rb,<br /> lib/lightblue/ast/visitors/validation_visitor.rb,<br /> lib/lightblue/ast/visitors/query_bind_visitor.rb,<br /> lib/lightblue/ast/visitors/projection_bind_visitor.rb</span>
 </dd>
   
 </dl>
@@ -98,7 +100,7 @@
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Lightblue/Client.html" title="Lightblue::Client (class)">Client</a></span>, <span class='object_link'><a href="Lightblue/Entity.html" title="Lightblue::Entity (class)">Entity</a></span>, <span class='object_link'><a href="Lightblue/Expression.html" title="Lightblue::Expression (class)">Expression</a></span>, <span class='object_link'><a href="Lightblue/Find.html" title="Lightblue::Find (class)">Find</a></span>, <span class='object_link'><a href="Lightblue/Manager.html" title="Lightblue::Manager (class)">Manager</a></span>, <span class='object_link'><a href="Lightblue/Request.html" title="Lightblue::Request (class)">Request</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Lightblue/Client.html" title="Lightblue::Client (class)">Client</a></span>, <span class='object_link'><a href="Lightblue/Entity.html" title="Lightblue::Entity (class)">Entity</a></span>, <span class='object_link'><a href="Lightblue/Expression.html" title="Lightblue::Expression (class)">Expression</a></span>, <span class='object_link'><a href="Lightblue/Find.html" title="Lightblue::Find (class)">Find</a></span>, <span class='object_link'><a href="Lightblue/Manager.html" title="Lightblue::Manager (class)">Manager</a></span>
     
   
 </p>
@@ -117,35 +119,167 @@
 
 
 
-  
-  
-  <h3 class="inherited">Constants included
-     from <span class='object_link'><a href="Lightblue/Configuration.html" title="Lightblue::Configuration (module)">Configuration</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Lightblue/Configuration.html#VALID_KEYS-constant" title="Lightblue::Configuration::VALID_KEYS (constant)">Configuration::VALID_KEYS</a></span></p>
-
-
 
 
 
 
   
-  
-  
-  
-  
-  
-  <h2>Method Summary</h2>
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Lightblue/Configuration.html" title="Lightblue::Configuration (module)">Configuration</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Lightblue/Configuration.html#configure-instance_method" title="Lightblue::Configuration#configure (method)">configure</a></span>, <span class='object_link'><a href="Lightblue/Configuration.html#options-instance_method" title="Lightblue::Configuration#options (method)">options</a></span></p>
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configure-class_method" title="#configure (class method)">+ (Object) <strong>configure</strong> {|_self| ... }</a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      extended
+      from <span class='object_link'><a href="Lightblue/Configuration.html#configure-class_method" title="Lightblue::Configuration#configure (method)">Configuration</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#options-class_method" title="#options (class method)">+ (Object) <strong>options</strong> </a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      extended
+      from <span class='object_link'><a href="Lightblue/Configuration.html#options-class_method" title="Lightblue::Configuration#options (method)">Configuration</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="configure-class_method">
+  
+    + (<tt>Object</tt>) <strong>configure</strong> {|_self| ... }
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Lightblue/Configuration.html#configure-class_method" title="Lightblue::Configuration#configure (method)">Configuration</a></span>
+    </span>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>_self</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>_self</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Lightblue/Configuration.html" title="Lightblue::Configuration (module)">Lightblue::Configuration</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the object that the method was called on</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="options-class_method">
+  
+    + (<tt>Object</tt>) <strong>options</strong> 
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Lightblue/Configuration.html#options-class_method" title="Lightblue::Configuration#options (method)">Configuration</a></span>
+    </span>
+  
+</h3>
+</div>
+    
+  </div>
 
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:54 2016 by
+  Generated on Sun Jan 31 04:33:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>

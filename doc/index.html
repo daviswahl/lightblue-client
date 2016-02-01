@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="js/custom.js"></script>
+
 
   </head>
   <body>
@@ -65,11 +67,18 @@
 
 <h1>Lightblue::Client</h1>
 
-<h2>Arel like queries</h2>
+<p>A Ruby query builder and client for <a href="(https://github.com/lightblue-platform)">Lightblue</a>. The focus has so far been towards taking advantage of the rich query interface provided by <a href="(https://github.com/lightblue-platform)">Lightblue</a>, and it </p>
 
-<pre class="code ruby"><code class="ruby">foo = Lightblue::Entity.new(:foo)
-foo.find{ field[:baz].eq(10) }.to_hash
-=&gt; {:op=&gt;&quot;$eq&quot;, :field=&gt;:baz, :rvalue=&gt;10}
+<ol>
+<li>Expressions are highly composable, which facilitates code reuse and legibility in addition to allowing queries to be built dynamically by your application.</li>
+<li>Expressions are backed by an AST, which currently provides syntactic validation against the Lightblue specification, as well as decent hinting and error messaging. Long term goals here involve leveraging Lightblue&#39;s introspective capabilities (metadata, schema, etc) to provide code gen (either AOT from a local schema or dynamically by consuming metadata from a host), auto-completion, and some level of semantic validation.</li>
+</ol>
+
+<h1>Usage</h1>
+
+<pre class="code ruby"><code class="ruby">   foo = Lightblue::Entity.new(:foo)
+   foo.find{ field[:baz].eq(10) }.to_hash
+   =&gt; {:op=&gt;&quot;$eq&quot;, :field=&gt;:baz, :rvalue=&gt;10}
 
 query =
   entity.find do
@@ -81,9 +90,9 @@ query =
 end.project do
   field(:bar).match(entity.find { field[:flim].eq(:flam) })
 end
+</code></pre>
 
-
-query.to_hash
+<p>query.to_hash
 =&gt;
 { entity: :foo,
   query:
@@ -106,28 +115,29 @@ query.to_hash
       op: :$eq,
       rvalue: :flam }
   }
-}
+}</p>
+
+<pre class="code ruby"><code class="ruby">
+Take a look at specs/lightblue/query_spec.rb for better examples
+https://github.com/daviswahl/lightblue-client/blob/master/spec/lightblue/query_spec.rb
+
+TODO:
+
+Add nodes for the rest of the tokens outlined in the spec: http://jewzaam.gitbooks.io/lightblue-specifications/content/language_specification/search_criteria.html
+
+Add update/create/delete
+
+See what can be done with metadata
+
+Entities are currently arbitrary. They could be linked to a schema, although I&#39;m not sure if it would benefit the AST.
+I don&#39;t fully understand how Lightblue does field comparisons (can you compare foo_entity[:field] to bar_entity[:field] ?). Need to experiment with this and consider some kind of join syntax.
 </code></pre>
-
-<p>Take a look at specs/lightblue/query_spec.rb for better examples
-<a href="https://github.com/daviswahl/lightblue-client/blob/master/spec/lightblue/query_spec.rb">https://github.com/daviswahl/lightblue-client/blob/master/spec/lightblue/query_spec.rb</a></p>
-
-<p>TODO:</p>
-
-<p>Add nodes for the rest of the tokens outlined in the spec: <a href="http://jewzaam.gitbooks.io/lightblue-specifications/content/language_specification/search_criteria.html">http://jewzaam.gitbooks.io/lightblue-specifications/content/language_specification/search_criteria.html</a></p>
-
-<p>Add update/create/delete</p>
-
-<p>See what can be done with metadata</p>
-
-<p>Entities are currently arbitrary. They could be linked to a schema, although I&#39;m not sure if it would benefit the AST.
-I don&#39;t fully understand how Lightblue does field comparisons (can you compare foo_entity[:field] to bar_entity[:field] ?). Need to experiment with this and consider some kind of join syntax.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:54 2016 by
+  Generated on Mon Feb  1 09:09:04 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>

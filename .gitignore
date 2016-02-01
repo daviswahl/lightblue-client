@@ -19,3 +19,7 @@ mkmf.log
 .DS_Store
 Guardfile
 .projectile
+/yard_templates
+.yardopts
+.yard_ext.rb
+/doc

@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="../../../js/custom.js"></script>
+
 
   </head>
   <body>
@@ -293,15 +295,6 @@ expands them (so that the validation visitor can process them.</p>
   
   
   
-  
-  
-  
-  
-  
-  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Visitor.html" title="Lightblue::AST::Visitor (class)">Lightblue::AST::Visitor</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Visitor.html#handle_with-class_method" title="Lightblue::AST::Visitor.handle_with (method)">handle_with</a></span></p>
-
-  
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -322,11 +315,11 @@ expands them (so that the validation visitor can process them.</p>
       <pre class="lines">
 
 
-36
-37</pre>
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_handler_missing'>handler_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -350,12 +343,12 @@ expands them (so that the validation visitor can process them.</p>
       <pre class="lines">
 
 
+12
 13
-14
-15</pre>
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_expression'>on_expression</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_updated'>updated</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_process_all'>process_all</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -391,6 +384,7 @@ expands them (so that the validation visitor can process them.</p>
       <pre class="lines">
 
 
+43
 44
 45
 46
@@ -406,11 +400,10 @@ expands them (so that the validation visitor can process them.</p>
 56
 57
 58
-59
-60</pre>
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_maybe'>on_maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span> <span class='comment'># rubocop:disable Metrics/CyclomaticComplexity
 </span>  <span class='id identifier rubyid_child'>child</span><span class='comma'>,</span> <span class='op'>=</span> <span class='op'>*</span><span class='id identifier rubyid_node'>node</span>
@@ -449,17 +442,17 @@ expands them (so that the validation visitor can process them.</p>
       <pre class="lines">
 
 
+21
 22
 23
 24
 25
 26
 27
-28
-29</pre>
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_nullable_expression'>on_nullable_expression</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parameters'>parameters</span> <span class='op'>=</span> <span class='const'>AST</span><span class='op'>::</span><span class='const'>Tokens</span><span class='op'>::</span><span class='const'>EXPRESSIONS</span><span class='lbracket'>[</span><span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span>
@@ -489,12 +482,12 @@ expands them (so that the validation visitor can process them.</p>
       <pre class="lines">
 
 
+17
 18
-19
-20</pre>
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_query_array'>on_query_array</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_updated'>updated</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_process_all'>process_all</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -519,12 +512,12 @@ expands them (so that the validation visitor can process them.</p>
       <pre class="lines">
 
 
+38
 39
-40
-41</pre>
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_terminal'>on_terminal</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span>
@@ -549,12 +542,12 @@ expands them (so that the validation visitor can process them.</p>
       <pre class="lines">
 
 
+7
 8
-9
-10</pre>
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/ast/visitors/unfold_visitor.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_union'>on_union</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_updated'>updated</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_process_all'>process_all</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -569,9 +562,9 @@ expands them (so that the validation visitor can process them.</p>
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:55 2016 by
+  Generated on Sun Jan 31 04:15:03 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>

@@ -25,6 +25,8 @@
 
   <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="../../js/custom.js"></script>
+
 
   </head>
   <body>
@@ -107,28 +109,46 @@
 
 
 
-  <h2>Constant Summary</h2>
-  
-  <h3 class="inherited">Constants inherited
-     from <span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Lightblue::Expression</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Expression.html#Errors-constant" title="Lightblue::Expression::Errors (constant)">Lightblue::Expression::Errors</a></span></p>
-
-
 
 
 
 
   
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bind-instance_method" title="#bind (instance method)">- (Object) <strong>bind</strong>(expression_type) </a>
+    
+
+    
+  </span>
   
   
   
   
   
-  <h2>Method Summary</h2>
   
-  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Expression.html" title="Lightblue::Expression (class)">Lightblue::Expression</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Expression.html#initialize-instance_method" title="Lightblue::Expression#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Expression.html#klass-instance_method" title="Lightblue::Expression#klass (method)">#klass</a></span></p>
-<div id="constructor_details" class="method_details_list">
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Expression.html#initialize-instance_method" title="Lightblue::Expression#initialize (method)">Lightblue::Expression</a></span></p>
@@ -136,12 +156,83 @@
 </div>
 
 
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="bind-instance_method">
+  
+    - (<tt>Object</tt>) <strong>bind</strong>(expression_type) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expression_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>:query | :projection | :sort</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/lightblue/expressions/unbound.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bind'>bind</span><span class='lparen'>(</span><span class='id identifier rubyid_expression_type'>expression_type</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_expression_type'>expression_type</span>
+  <span class='kw'>when</span> <span class='symbol'>:query</span> <span class='kw'>then</span> <span class='const'>Lightblue</span><span class='op'>::</span><span class='const'>AST</span><span class='op'>::</span><span class='const'>Visitors</span><span class='op'>::</span><span class='const'>QueryBindVisitor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:projection</span> <span class='kw'>then</span> <span class='const'>Lightblue</span><span class='op'>::</span><span class='const'>AST</span><span class='op'>::</span><span class='const'>Visitors</span><span class='op'>::</span><span class='const'>ProjectionBindVisitor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 30 12:40:55 2016 by
+  Generated on Sun Jan 31 04:15:03 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.0).
+  0.8.7.6 (ruby-2.2.3).
 </div>
 
   </body>
