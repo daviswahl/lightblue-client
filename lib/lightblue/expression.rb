@@ -23,6 +23,19 @@ module Lightblue
       freeze
     end
 
+    def validate
+      Lightblue::AST::Visitors::ValidationVisitor.new.process(@ast)
+    end
+
+    def unfold
+      Lightblue::AST::Visitors::UnfoldVisitor.new.process(@ast)
+    end
+
+    def to_hash
+      h, = *Lightblue::AST::Visitors::HashVisitor.new.process(unfold)
+      h
+    end
+
     def ast
       @ast
     end
