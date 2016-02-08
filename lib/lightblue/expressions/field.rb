@@ -29,6 +29,22 @@ module Lightblue
         Unbound.new(new_ast)
       end
 
+      def asc
+        Sort.new(self, :asc)
+      end
+
+      def desc
+        Sort.new(self, :desc)
+      end
+
+      def include(bool = true)
+        Projection.new(self).include(bool)
+      end
+
+      def recursive(bool = true)
+        Projection.new(self).recursive(bool)
+      end
+
       private
 
       # @TODO extract regex options

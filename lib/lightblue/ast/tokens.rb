@@ -29,7 +29,8 @@ module Lightblue
 
         # Sort
 
-        sort: [:sort_key, :sort_key_array],
+        sort: [:sort_expression, :sort_expression_array],
+        sort_direction: [:$ast, :$desc],
 
         # Not part of the spec
         maybe_boolean: [:boolean, :empty],
@@ -123,12 +124,19 @@ module Lightblue
             { range: :range },
             { project: :maybe_projection },
             { sort: :maybe_sort }
-          ]
+          ],
 
+          sort_expression: [
+            {
+              field: :field,
+              direction: :sort_direction
+            }
+          ]
         }.freeze
 
       ATOMS = [
         :value_list_array,
+        :sort_direction,
         :array,
         :field,
         :value,

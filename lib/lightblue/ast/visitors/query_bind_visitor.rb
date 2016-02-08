@@ -6,6 +6,11 @@ module Lightblue
           ast.updated(:value_comparison_expression, ast.children)
         end
 
+        def on_unbound_field_comparison_expression(ast)
+          ast.updated(:field_comparison_expression, ast.children)
+        end
+
+
         def on_unbound_match_expression(ast)
           ast.updated(:array_match_expression, ast.children)
         end

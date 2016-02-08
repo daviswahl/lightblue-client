@@ -1,0 +1,26 @@
+require 'spec_helper'
+describe 'read me spec' do
+  describe 'the examples' do
+    it 'should work' do
+
+      foo = Lightblue.entity(:foo, '1.0.0')
+      find_query = foo.find
+                   .query(foo[:bar].eq(foo[:batz]))
+                   .project(Lightblue.star).to_query
+      expect(find_query).to eq({
+        entity: "foo",
+        entityVersion: "1.0.0",
+        query: {
+          field: :foo,
+          op: :$eq,
+          rfield: :bar
+        },
+        projection: {
+          field: "*",
+          include: true,
+          recursive: true
+        }
+      })
+    end
+  end
+end

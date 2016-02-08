@@ -13,6 +13,7 @@ module Lightblue
           hash = {}
           node.each_with_index do |child, index|
             child = process(child) unless child.terminal?
+            hash.merge!(child) and next if child.is_a? Hash
             next if child.nil? || child.type == :empty || child == :empty
             hash[fields[index]], = *child
           end
@@ -31,13 +32,23 @@ module Lightblue
         end
 
         def on_expression_array(node)
-          node.updated(nil, process_all(node))
+          node.updated(nil, [process_all(node).map(&:children).flatten])
         end
-        handle_with :on_expression_array, [:query_array, :basic_projection_array]
+        handle_with :on_expression_array, [:query_array, :basic_projection_array, :sort_expression_array]
 
         def on_nary_logical_expression(node)
           op, children = *process_all(node)
           node.updated(nil, [{ op => children.map(&:children).flatten }])
+        end
+
+        def on_sort_expression(node)
+          field, dir = *node
+          node.updated(nil, [{ field.first => dir.first }])
+        end
+
+        def on_range_expression(node)
+          from, option = *process_all(node)
+          node.updated(nil, [{ from: from }.merge(option)])
         end
 
         def on_terminals(node)
@@ -46,6 +57,11 @@ module Lightblue
         end
         handle_with :on_terminals, Lightblue::AST::Tokens::TERMINALS
         handle_with :on_terminals, [:maybe_boolean, :maybe_sort]
+
+        def on_option(node)
+          key, value = *process_all(node)
+          { key => value }
+        end
 
         def on_maybe_projection(node)
           value, = *node.updated(nil, process_all(node))

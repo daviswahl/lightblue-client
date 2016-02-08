@@ -39,12 +39,12 @@ queries.
     
     find_query.print #=>
     {
-      entity: "foo",
+      entity: :foo,
       entityVersion: "1.0.0",
       query: { 
-        field: :foo, 
+        field: :bar, 
         op: :$eq, 
-        rfield: :bar
+        rfield: :batz
       },
       projection: {
         field: "*",

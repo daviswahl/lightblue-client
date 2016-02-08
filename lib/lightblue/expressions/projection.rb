@@ -4,6 +4,7 @@ module Lightblue
       # @param [Unbound, Field, AST::Node, Array<Unbound, Field, AST::Node>, nil] expression
       def initialize(expression = nil)
         ast = case expression
+              when Expressions::Projection then expression.ast
               when Expressions::Unbound then expression.bind(:projection)
               when Expressions::Field then new_node(:field_projection, [expression.ast])
               when AST::Node then expression
@@ -13,6 +14,22 @@ module Lightblue
               when nil then new_node(:projection, [])
               end
         super ast
+      end
+
+      def include(bool = true)
+        klass.new ast.concat([new_node(:option,
+                                       [new_node(:value, [:include]),
+                                        new_node(:value, [bool])])])
+      end
+
+      def recursive(bool = true)
+        klass.new ast.concat([new_node(:option,
+                                       [new_node(:value, [:recursive]),
+                                        new_node(:value, [bool])])])
+      end
+
+      def ==(other)
+        ast == other.ast
       end
     end
   end

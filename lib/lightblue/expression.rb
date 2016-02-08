@@ -75,11 +75,17 @@ module Lightblue
     def klass
       self.class
     end
+
+    def ==(other)
+      ast == other.ast
+    end
   end
 end
+
 require 'lightblue/expressions/unbound'
 require 'lightblue/expressions/field'
 require 'lightblue/expressions/query'
+require 'lightblue/expressions/range'
 require 'lightblue/expressions/update'
 require 'lightblue/expressions/sort'
 require 'lightblue/expressions/projection'
