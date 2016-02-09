@@ -15,7 +15,9 @@ NOTE:  This document serves as a specification for the intended behavior of the 
 # Lightblue::Client
 
 Ruby query builder and client for [Lightblue][]. The focus has so far been towards taking advantage of the rich query interface provided by [Lightblue][]
+
 1. Expressions are highly composable, which facilitates code reuse and legibility in addition to allowing queries to be built dynamically by your application.
+
 2. Expressions are backed by an AST, which currently provides syntactic validation against the Lightblue specification, as well as decent hinting and error messaging. Long term goals here involve leveraging Lightblue's introspective capabilities (metadata, schema, etc) to provide code gen (either AOT from a local schema or dynamically by consuming metadata from a host), auto-completion, and some level of semantic validation.
 
 [Data Operations][]
@@ -54,8 +56,11 @@ queries.
     }
 ```
 Breaking down the above example:
+
 1. We initialize a new entity named "foo", with a version string of "1.0.0"
+
 2. We open a create a new `find` data operation on the foo entity. Operations correspond to the data APIs defined in the lightblue spec: `find`, `update`, `insert`, `save`, and `delete`. Learn more about [Data Operations][].
+
 3. We create a query expression and bind it to the find operation. `foo[:bar]` initializes a field expression: it is shorthand for expressing 'the field `bar` on the entity `foo`". Comparison operators are defined on field expresions, so they're an important expression class.
 4. We create a projection expression and bind it to the find operation. The `include` option is automatically set on projection fields, and the `recursive` field is automatically set on 
 the special `*` field. To exclude a field from projection, simply negate the field: `project(![:someField])`. More on this in [Projection Expressions][].
@@ -113,7 +118,9 @@ Expressions may be composed and chained. If you are familiar with [Arel][], the 
 Unlike [Arel][], we do not guarantee closure over all operations: Operations may 
 and expressions may only be chained in a manner that makes semantic sense. However, due to the fact that an expression may be semantically valid in a 
 number of contexts, some expressions are late binding, and will remain unresolved until:
+
 1. they are bound to another expression which resolves their type, or 
+
 2. they are implicitly bound to an expression type by calling an operator only valid on certain expressions. 
 
 A prime example of this are array match expressions, which have different semantic meaning when bound to a query or projection. 
