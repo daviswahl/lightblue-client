@@ -141,9 +141,6 @@ A prime example of this are array match expressions, which have different semant
       recursive: false 
     }
 ```
-For example:
-Take a look at [the spec](#specs/lightblue/query_spec.rb) for better examples
-https://github.com/daviswahl/lightblue-client/blob/master/spec/lightblue/query_spec.rb
 
 TODO:
 
