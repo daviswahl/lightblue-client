@@ -147,11 +147,10 @@ https://github.com/daviswahl/lightblue-client/blob/master/spec/lightblue/query_s
 
 TODO:
 
-Add nodes for the rest of the tokens outlined in the spec: http://jewzaam.gitbooks.io/lightblue-specifications/content/language_specification/search_criteria.html
+* Finalize API so we can start doing some kind of versioning.
+* AST/Visitors are full of development cruft, needs cleanup.
+* Specify a basic http interface so http adapters can be easily implemented
+* Add insert/delete/save (easy)
+* Add update (harder, totally different from other crud operations)
 
-Add update/create/delete
 
-See what can be done with metadata
-
-Entities are currently arbitrary. They could be linked to a schema, although I'm not sure if it would benefit the AST.
-I don't fully understand how Lightblue does field comparisons (can you compare foo_entity[:field] to bar_entity[:field] ?). Need to experiment with this and consider some kind of join syntax.
